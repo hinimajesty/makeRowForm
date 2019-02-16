@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TableRow to form maker</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="table-responsive">
+        <div id="tableForm">
+            
+        </div>
+    </div>
+
+    <script src="jq.min.js"></script>
+    <script src="jquery-maketableform.js"></script>
+    <script>
+        $("#tableForm").makeRowForm({
+            duplicateFirstRow: true,
+            duplicateMethod: "explicit", //determines whether mirror should be based on a number or event 
+            duplicateCount:2,
+            renderOrder:"duplicateFirst",  
+            mirrorAction:{"keyAction":"onKeyPress"}, 
+            useBootstrapTable:false, 
+            useBootstrapForm:true,  
+            columnStructurePerRow : [
+                [   
+                    [{"type":"input", "name":"username","value":"six hundred"}],
+                    [{"type":"select", "name":"hobbies" , "options": {"source":"external", "url" : "hobbies.php", "data": "hobbies", "cache_data": true} }],
+                    [{"type":"select", "name":"cgames" , "options": {"source":"external", "url" : "rest.php", "data": "cgames", "cache_data": true} }],
+                    [{"type":"select", "name":"mingames" , "options": {"source":"external", "url" : "rest.php", "data": "mingames", "cache_data": true} }],
+                    [{"type":"input", "name":"age","value":""}],
+                ] , 
+                [   
+                    [{"type":"select", "name":"social" , "options": {"source":"external", "url" : "rest.php", "data": "mingames", "cache_data": true} }],
+                    [{"type":"input", "name":"age","value":""}],
+                ]
+            ]
+        }); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+table { 
+            border:2px solid #ebeff2;
+            font-family:'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+            border-radius:3px;
+            border-spacing: 0px;
+            width:100%;
+        }
+
+        tr:hover {
+            background:#F4F8FB; 
+            border-collapse:collapse;
+            display: table-row;
+        } 
+
+        th, td {
+            padding:5px; 
+            color:rgb(121,121,121);
+            border:1px solid #ebeff2;
+            text-align:center;
+        }
+
+        #first_row { 
+            background:#EBEFF2; 
+            color:#6B6B6B;
+        }
+
+        table input {/*height:2px !important;*/ line-height:2px !important; /*width:50px !important;*/ text-align:center;}
+        table input,select {width:200px;height:50px;}
